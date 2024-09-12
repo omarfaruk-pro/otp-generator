@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+    background-color: #131212;
+    padding: 50px 0;
+}
+.container{
+    max-width: 1240px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    gap: 30px;
+}
+.row>div{
+    width: 100%;
+    background-color: #0b0a0a;
+    border-radius: 12px;
+}
+.text-center{
+    text-align: center;
+}
+.otp-generator{
+    position: relative;
+    padding: 40px;
+    height: 100%;
+    min-height: 500px;
+}
+.otp-generator input {
+    background-color: black;
+    box-shadow: inset 1px -2px 0px 20px #000000;
+    width: 280px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+    border: none;
+    color: white;
+    padding: 6px;
+    user-select: none;
+}
+.otp-generator input:focus{
+    border: none;
+}
+.otp-generator button {
+    display: inline-flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #000000;
+    border: 4px solid #402e2e;
+    border-radius: 50%;
+    text-align: center;
+    height: 130px;
+    width: 130px;
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+.otp-generator button.disable{
+    background-color: red;
+    cursor: default;
+}
+.keypad-area{
+    padding: 40px;
+}
+.keypad-area input {
+    background-color: black;
+    box-shadow: inset 1px -2px 0px 20px #000000;
+    width: 280px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+    border: none;
+    color: white;
+    padding: 6px;
+    user-select: none;
+}
+.keypad-area input:focus{
+    border: none;
+}
+.keypad-number {
+    display: flex;
+    column-gap: 2%;
+    flex-wrap: wrap;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    row-gap: 14px;
+}
+.keypad-number button {
+    width: 32%;
+    font-size: 56px;
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 8px 0 #322f2f4a;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.submit-btn {
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 8px 0 #322f2f4a;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 60px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.submit-btn.disable{
+    background-color: red;
+    cursor: default;
+}
+.tryLeft {
+    color: #f82121;
+    margin-top: 10px;
+    font-size: 20px;
+    display: inline-block;
+    font-weight: 600;
+    animation: tryScale 1s ease-in-out infinite;
+}
+@keyframes tryScale {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.notification p {
+    text-align: center;
+    max-width: 320px;
+    font-size: 18px;
+    background-color: rgb(45 55 55);
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: none;
+}
